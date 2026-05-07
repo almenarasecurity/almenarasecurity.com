@@ -1,0 +1,36 @@
+---
+interface Props {
+  variant?: 'horizontal' | 'stacked' | 'compact';
+  class?: string;
+  light?: boolean;
+}
+
+const { variant = 'horizontal', class: className = '', light = false } = Astro.props;
+const textColor = light ? 'text-white' : 'text-navy-950';
+---
+
+{variant === 'compact' && (
+  <div class:list={['inline-flex items-center', className]}>
+    <img src="/almenara-logo.png" alt="Almenara Security" class="h-8 w-auto" />
+  </div>
+)}
+
+{variant === 'horizontal' && (
+  <div class:list={['inline-flex items-center gap-3', className]}>
+    <img src="/almenara-logo.png" alt="" class="h-9 w-auto" aria-hidden="true" />
+    <div class:list={['flex flex-col leading-none', textColor]}>
+      <span class="text-base font-bold tracking-wide">ALMENARA</span>
+      <span class="text-[0.6rem] font-medium tracking-[0.25em] uppercase opacity-70">Security</span>
+    </div>
+  </div>
+)}
+
+{variant === 'stacked' && (
+  <div class:list={['inline-flex flex-col items-center gap-3', className]}>
+    <img src="/almenara-logo.png" alt="" class="h-16 w-auto" aria-hidden="true" />
+    <div class:list={['flex flex-col items-center leading-none', textColor]}>
+      <span class="text-xl font-bold tracking-wide">ALMENARA</span>
+      <span class="text-[0.65rem] font-medium tracking-[0.3em] uppercase opacity-70">Security</span>
+    </div>
+  </div>
+)}

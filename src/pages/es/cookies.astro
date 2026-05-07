@@ -1,0 +1,63 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Section from '@components/Section.astro';
+import { t } from '@i18n/utils';
+
+const lang = 'es' as const;
+---
+
+<BaseLayout
+  title={`${t('cookies_page.title', lang)} | Almenara Security`}
+  description={t('cookies_page.meta_description', lang)}
+>
+  <section class="bg-navy-950 pt-28 pb-16 lg:pt-36 lg:pb-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl font-extrabold tracking-tight text-white">{t('cookies_page.title', lang)}</h1>
+    </div>
+  </section>
+
+  <Section bg="white">
+    <div class="prose prose-gray mx-auto max-w-3xl">
+      <h2>¿Qué son las cookies?</h2>
+      <p>Las cookies son pequeños archivos de texto que los sitios web almacenan en tu dispositivo para recordar preferencias, mejorar la funcionalidad y analizar patrones de uso.</p>
+
+      <h2>Cookies utilizadas en este sitio</h2>
+      <p>Este sitio web utiliza <strong>cookies y almacenamiento local mínimos</strong>:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>Finalidad</th>
+            <th>Duración</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>almenara-lang</code></td>
+            <td>localStorage</td>
+            <td>Recuerda tu preferencia de idioma (EN/ES)</td>
+            <td>Persistente</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><strong>No</strong> utilizamos:</p>
+      <ul>
+        <li>Cookies de seguimiento de terceros</li>
+        <li>Cookies publicitarias</li>
+        <li>Google Analytics ni servicios de seguimiento similares</li>
+      </ul>
+
+      <h2>Analítica</h2>
+      <p>Cuando la analítica está activa, utilizamos Plausible Analytics, un servicio de analítica respetuoso con la privacidad que no utiliza cookies ni recoge datos personales. Plausible cumple con el RGPD, CCPA y PECR.</p>
+
+      <h2>Gestión de cookies</h2>
+      <p>Puedes controlar y eliminar las cookies a través de la configuración de tu navegador. Ten en cuenta que deshabilitar el almacenamiento local puede afectar a la funcionalidad de preferencia de idioma de este sitio.</p>
+
+      <h2>Contacto</h2>
+      <p>Si tienes preguntas sobre nuestras prácticas de cookies, contáctanos en info@almenarasecurity.com.</p>
+    </div>
+  </Section>
+</BaseLayout>

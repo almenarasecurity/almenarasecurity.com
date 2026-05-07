@@ -1,0 +1,63 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Section from '@components/Section.astro';
+import { t } from '@i18n/utils';
+
+const lang = 'en' as const;
+---
+
+<BaseLayout
+  title={`${t('cookies_page.title', lang)} | Almenara Security`}
+  description={t('cookies_page.meta_description', lang)}
+>
+  <section class="bg-navy-950 pt-28 pb-16 lg:pt-36 lg:pb-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl font-extrabold tracking-tight text-white">{t('cookies_page.title', lang)}</h1>
+    </div>
+  </section>
+
+  <Section bg="white">
+    <div class="prose prose-gray mx-auto max-w-3xl">
+      <h2>What are cookies?</h2>
+      <p>Cookies are small text files that websites store on your device to remember preferences, improve functionality, and analyze usage patterns.</p>
+
+      <h2>Cookies used on this website</h2>
+      <p>This website uses <strong>minimal cookies and local storage</strong>:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Purpose</th>
+            <th>Duration</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>almenara-lang</code></td>
+            <td>localStorage</td>
+            <td>Remembers your language preference (EN/ES)</td>
+            <td>Persistent</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>We do <strong>not</strong> use:</p>
+      <ul>
+        <li>Third-party tracking cookies</li>
+        <li>Advertising cookies</li>
+        <li>Google Analytics or similar tracking services</li>
+      </ul>
+
+      <h2>Analytics</h2>
+      <p>When analytics are enabled, we use Plausible Analytics, a privacy-friendly analytics service that does not use cookies and does not collect personal data. Plausible is compliant with GDPR, CCPA, and PECR.</p>
+
+      <h2>Managing cookies</h2>
+      <p>You can control and delete cookies through your browser settings. Note that disabling localStorage may affect the language preference feature on this website.</p>
+
+      <h2>Contact</h2>
+      <p>If you have questions about our cookie practices, contact us at info@almenarasecurity.com.</p>
+    </div>
+  </Section>
+</BaseLayout>

@@ -1,0 +1,79 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Section from '@components/Section.astro';
+import Button from '@components/Button.astro';
+import { t, getLocalizedPath } from '@i18n/utils';
+
+const lang = 'en' as const;
+---
+
+<BaseLayout
+  title={`${t('secdev_page.title', lang)} | Almenara Security`}
+  description={t('secdev_page.meta_description', lang)}
+>
+  <!-- Hero -->
+  <section class="bg-navy-950 pt-28 pb-16 lg:pt-36 lg:pb-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <span class="inline-block rounded-full bg-amber-500/15 px-4 py-1.5 font-mono text-xs font-medium text-amber-400 tracking-wider uppercase">Secure Development</span>
+        <h1 class="mt-6 text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
+          {t('secdev_page.hero_title', lang)}
+        </h1>
+        <p class="mt-6 text-lg text-navy-200 leading-relaxed">
+          {t('secdev_page.hero_subtitle', lang)}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What is secure development -->
+  <Section bg="white">
+    <div class="max-w-3xl">
+      <h2 class="text-3xl font-bold text-navy-950">{t('secdev_page.what.title', lang)}</h2>
+      <p class="mt-6 text-gray-600 leading-relaxed">{t('secdev_page.what.description', lang)}</p>
+      <p class="mt-4 text-gray-600 leading-relaxed">{t('secdev_page.what.description_2', lang)}</p>
+    </div>
+  </Section>
+
+  <!-- What we build -->
+  <Section bg="gray">
+    <h2 class="text-3xl font-bold text-navy-950">{t('secdev_page.areas.title', lang)}</h2>
+    <div class="mt-12 grid gap-8 md:grid-cols-2">
+      {(['tooling', 'web', 'api', 'platforms'] as const).map((key) => (
+        <div class="rounded-xl border border-gray-200 bg-white p-8">
+          <h3 class="text-lg font-bold text-navy-950">{t(`secdev_page.areas.${key}.title`, lang)}</h3>
+          <p class="mt-3 text-gray-600 leading-relaxed">{t(`secdev_page.areas.${key}.description`, lang)}</p>
+        </div>
+      ))}
+    </div>
+  </Section>
+
+  <!-- Principles -->
+  <Section bg="white">
+    <h2 class="text-3xl font-bold text-navy-950">{t('secdev_page.principles.title', lang)}</h2>
+    <div class="mt-12 grid gap-8 md:grid-cols-2">
+      {[0, 1, 2, 3].map((i) => (
+        <div class="rounded-xl border border-gray-200 bg-white p-8">
+          <div class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-amber-50 font-mono text-sm font-semibold text-amber-600">
+            {String(i + 1).padStart(2, '0')}
+          </div>
+          <h3 class="text-lg font-bold text-navy-950">{t(`secdev_page.principles.items.${i}.title` as any, lang)}</h3>
+          <p class="mt-3 text-gray-600 leading-relaxed">{t(`secdev_page.principles.items.${i}.description` as any, lang)}</p>
+        </div>
+      ))}
+    </div>
+  </Section>
+
+  <!-- CTA -->
+  <Section bg="navy">
+    <div class="text-center">
+      <h2 class="text-3xl font-bold text-white">{t('secdev_page.cta.title', lang)}</h2>
+      <p class="mt-4 text-lg text-navy-200">{t('secdev_page.cta.subtitle', lang)}</p>
+      <div class="mt-10">
+        <Button href={getLocalizedPath('/contact', lang) + '?service=secdev'} variant="primary" size="lg">
+          {t('secdev_page.cta.button', lang)}
+        </Button>
+      </div>
+    </div>
+  </Section>
+</BaseLayout>

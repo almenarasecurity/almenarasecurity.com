@@ -1,0 +1,24 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Button from '@components/Button.astro';
+import { tUI } from '@i18n/utils';
+
+const lang = 'es' as const;
+---
+
+<BaseLayout
+  title="Página no encontrada | Almenara Security"
+  description="La página que buscas no existe."
+  noindex={true}
+>
+  <section class="flex min-h-[70vh] items-center justify-center pt-20">
+    <div class="text-center px-4">
+      <p class="font-mono text-7xl font-bold text-amber-500">404</p>
+      <h1 class="mt-4 text-3xl font-bold text-navy-950">{tUI('notfound.title', lang)}</h1>
+      <p class="mt-3 text-gray-500">{tUI('notfound.text', lang)}</p>
+      <div class="mt-8">
+        <Button href="/es/" variant="primary">{tUI('cta.back_home', lang)}</Button>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,45 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Section from '@components/Section.astro';
+import { t } from '@i18n/utils';
+
+const lang = 'en' as const;
+---
+
+<BaseLayout
+  title={`${t('legal_page.title', lang)} | Almenara Security`}
+  description={t('legal_page.meta_description', lang)}
+>
+  <section class="bg-navy-950 pt-28 pb-16 lg:pt-36 lg:pb-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl font-extrabold tracking-tight text-white">{t('legal_page.title', lang)}</h1>
+    </div>
+  </section>
+
+  <Section bg="white">
+    <!-- TODO: replace with real legal content reviewed by a lawyer -->
+    <div class="prose prose-gray mx-auto max-w-3xl">
+      <h2>Company information</h2>
+      <p>In compliance with Article 10 of Law 34/2002 (LSSI-CE):</p>
+      <ul>
+        <li><strong>Owner:</strong> Julio Martínez Martínez-Checa</li>
+        <li><strong>Trading as:</strong> Almenara Security</li>
+        <li><strong>NIF:</strong> Available upon request at info@almenarasecurity.com</li>
+        <li><strong>Location:</strong> Málaga, Spain</li>
+        <li><strong>Email:</strong> info@almenarasecurity.com</li>
+      </ul>
+
+      <h2>Purpose of this website</h2>
+      <p>This website provides information about the cybersecurity services offered by Almenara Security, including penetration testing and cybersecurity awareness training.</p>
+
+      <h2>Intellectual property</h2>
+      <p>All content on this website, including text, graphics, logos, and software, is the property of Almenara Security or its licensors and is protected by applicable intellectual property laws.</p>
+
+      <h2>Limitation of liability</h2>
+      <p>Almenara Security makes reasonable efforts to ensure the accuracy of the information on this website but does not guarantee it is complete, accurate, or up-to-date. The use of this website is at the user's own risk.</p>
+
+      <h2>Applicable law and jurisdiction</h2>
+      <p>This legal notice is governed by Spanish law. Any disputes arising from the use of this website shall be subject to the exclusive jurisdiction of the courts of Malaga, Spain.</p>
+    </div>
+  </Section>
+</BaseLayout>

@@ -1,0 +1,128 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Section from '@components/Section.astro';
+import Button from '@components/Button.astro';
+import FAQ from '@components/FAQ.astro';
+import { t, getLocalizedPath } from '@i18n/utils';
+
+const lang = 'en' as const;
+
+const severityColors: Record<string, string> = {
+  Critical: 'bg-red-50 border-red-200 text-red-700',
+  High: 'bg-orange-50 border-orange-200 text-orange-700',
+  Medium: 'bg-amber-50 border-amber-200 text-amber-700',
+  Low: 'bg-blue-50 border-blue-200 text-blue-700',
+};
+---
+
+<BaseLayout
+  title={`${t('ppf_page.title', lang)} | Almenara Security`}
+  description={t('ppf_page.meta_description', lang)}
+>
+  <!-- Hero -->
+  <section class="bg-navy-950 pt-28 pb-16 lg:pt-36 lg:pb-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <span class="inline-block rounded-full bg-amber-500/15 px-4 py-1.5 font-mono text-xs font-medium text-amber-400 tracking-wider uppercase">Pay per finding</span>
+        <h1 class="mt-6 text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
+          {t('ppf_page.hero_title', lang)}
+        </h1>
+        <p class="mt-6 text-lg text-navy-200 leading-relaxed">
+          {t('ppf_page.hero_subtitle', lang)}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <Section bg="white">
+    <div class="max-w-3xl">
+      <h2 class="text-3xl font-bold text-navy-950">{t('ppf_page.what.title', lang)}</h2>
+      <p class="mt-6 text-gray-600 leading-relaxed">{t('ppf_page.what.description', lang)}</p>
+      <p class="mt-4 text-gray-600 leading-relaxed">{t('ppf_page.what.description_2', lang)}</p>
+    </div>
+  </Section>
+
+  <!-- Why pay per finding -->
+  <Section bg="gray">
+    <h2 class="text-3xl font-bold text-navy-950">{t('ppf_page.why.title', lang)}</h2>
+    <div class="mt-12 grid gap-8 md:grid-cols-2">
+      {[0, 1, 2, 3].map((i) => (
+        <div class="rounded-xl border border-gray-200 bg-white p-8">
+          <div class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-amber-50 font-mono text-sm font-semibold text-amber-600">
+            {String(i + 1).padStart(2, '0')}
+          </div>
+          <h3 class="text-lg font-bold text-navy-950">{t(`ppf_page.why.items.${i}.title` as any, lang)}</h3>
+          <p class="mt-3 text-gray-600 leading-relaxed">{t(`ppf_page.why.items.${i}.description` as any, lang)}</p>
+        </div>
+      ))}
+    </div>
+  </Section>
+
+  <!-- Pricing by severity -->
+  <Section bg="white">
+    <div class="mx-auto max-w-3xl">
+      <h2 class="text-center text-3xl font-bold text-navy-950">{t('ppf_page.pricing.title', lang)}</h2>
+      <p class="mt-6 text-center text-gray-600 leading-relaxed">{t('ppf_page.pricing.description', lang)}</p>
+      <div class="mt-12 space-y-4">
+        {[0, 1, 2, 3].map((i) => {
+          const severity = t(`ppf_page.pricing.tiers.${i}.severity` as any, lang);
+          const colors = severityColors[severity] || 'bg-gray-50 border-gray-200 text-gray-700';
+          return (
+            <div class={`flex flex-col gap-3 rounded-xl border p-6 sm:flex-row sm:items-center sm:justify-between ${colors}`}>
+              <div>
+                <div class="flex items-center gap-3">
+                  <span class="font-bold text-lg">{severity}</span>
+                  <span class="font-mono text-xs opacity-70">{t(`ppf_page.pricing.tiers.${i}.cvss` as any, lang)}</span>
+                </div>
+                <p class="mt-1 text-sm opacity-80">{t(`ppf_page.pricing.tiers.${i}.description` as any, lang)}</p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      <p class="mt-8 text-center text-sm text-gray-500 italic">{t('ppf_page.pricing.cap_note', lang)}</p>
+    </div>
+  </Section>
+
+  <!-- Scope and rules -->
+  <Section bg="gray">
+    <div class="max-w-3xl">
+      <h2 class="text-3xl font-bold text-navy-950">{t('ppf_page.scope.title', lang)}</h2>
+      <ul class="mt-8 space-y-4">
+        {[0, 1, 2, 3, 4].map((i) => (
+          <li class="flex items-start gap-3 text-gray-600">
+            <svg class="mt-1 h-5 w-5 shrink-0 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>{t(`ppf_page.scope.items.${i}` as any, lang)}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </Section>
+
+  <!-- FAQ -->
+  <Section bg="white">
+    <h2 class="text-center text-3xl font-bold text-navy-950">{t('ppf_page.faq.title', lang)}</h2>
+    <div class="mx-auto mt-12 max-w-3xl">
+      <FAQ items={[0, 1, 2, 3].map((i) => ({
+        q: t(`ppf_page.faq.items.${i}.q` as any, lang),
+        a: t(`ppf_page.faq.items.${i}.a` as any, lang),
+      }))} />
+    </div>
+  </Section>
+
+  <!-- CTA -->
+  <Section bg="navy">
+    <div class="text-center">
+      <h2 class="text-3xl font-bold text-white">{t('ppf_page.cta.title', lang)}</h2>
+      <p class="mt-4 text-lg text-navy-200">{t('ppf_page.cta.subtitle', lang)}</p>
+      <div class="mt-10">
+        <Button href={getLocalizedPath('/contact', lang) + '?service=ppf'} variant="primary" size="lg">
+          {t('ppf_page.cta.button', lang)}
+        </Button>
+      </div>
+    </div>
+  </Section>
+</BaseLayout>
