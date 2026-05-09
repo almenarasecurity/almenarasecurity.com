@@ -107,7 +107,7 @@ const lang = 'es' as const;
             <p class="mt-3 text-gray-600 leading-relaxed">{t('about_page.team.victor.bio_2', lang)}</p>
 
             <div class="mt-6 flex flex-wrap gap-2">
-              {(t('about_page.team.victor.skills', lang) as unknown as string[]).map((skill: string) => (
+              {['Análisis de Código Fuente', 'Pentesting Web', 'Auditoría de Seguridad', 'PHP/MySQL', 'OWASP'].map((skill) => (
                 <span class="inline-block rounded-full bg-navy-50 px-3 py-1 font-mono text-xs font-medium text-navy-700">{skill}</span>
               ))}
             </div>
