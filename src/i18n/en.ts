@@ -533,6 +533,16 @@ const en = {
         linkedin: 'https://linkedin.com/in/julio-mart%C3%ADnez-mart%C3%ADnez-checa-91758596',
         github: 'https://github.com/julioxus',
       },
+      victor: {
+        name: 'Víctor Reyes',
+        role: 'Co-founder & Security Researcher',
+        bio: 'Security researcher with 7+ years of web application auditing experience. He has worked as a Security Auditor at Hispasec Sistemas and currently at Freepik Company, where he has spent over 5 years assessing the security of digital products at scale. His background as a web developer gives him the ability to read code the way its authors think.',
+        bio_2: 'His specialty is source code analysis — a discipline where hands-on experience outperforms any automated tool. An active participant in the security community, he regularly attends national and international conferences. He firmly believes that understanding how software is built is the key to finding how it breaks.',
+        skills: ['Source Code Analysis', 'Web Pentesting', 'Security Auditing', 'PHP/MySQL', 'OWASP'],
+        speaking: ['Navaja Negra', 'RootedCON'],
+        linkedin: 'https://linkedin.com/in/victor-reyes',
+        github: 'https://github.com/robb-gg',
+      },
     },
     malaga: {
       title: 'Why Malaga',
