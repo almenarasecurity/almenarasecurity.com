@@ -536,10 +536,8 @@ const es = {
       victor: {
         name: 'Víctor Reyes',
         role: 'Co-fundador e Investigador de Seguridad',
-        bio: 'Investigador de seguridad con más de 7 años de experiencia en auditoría de aplicaciones web. Ha trabajado como Security Auditor en Hispasec Sistemas y actualmente en Freepik Company, donde lleva más de 5 años evaluando la seguridad de productos digitales a gran escala. Su trayectoria como desarrollador web le permite leer el código con la mentalidad de quien lo escribe.',
-        bio_2: 'Su especialidad es el análisis de código fuente — una disciplina donde la experiencia práctica supera a cualquier herramienta automatizada. Seguidor activo de la escena de seguridad, asiste regularmente a conferencias nacionales e internacionales. Cree firmemente que entender cómo se construye el software es la clave para encontrar cómo se rompe.',
-        skills: ['Análisis de Código Fuente', 'Pentesting Web', 'Auditoría de Seguridad', 'PHP/MySQL', 'OWASP'],
-        speaking: ['Navaja Negra', 'RootedCON'],
+        bio: 'Investigador de seguridad con más de 7 años de experiencia en auditoría de seguridad de aplicaciones web. Su trayectoria como desarrollador web le otorga una perspectiva única: entiende el código con la misma mentalidad de quien lo escribe.',
+        bio_2: 'Su especialidad es el análisis de código fuente — una disciplina donde la experiencia práctica supera a cualquier herramienta automatizada. Seguidor activo de la escena de seguridad, cree firmemente que entender cómo se construye el software es la clave para encontrar cómo se rompe.',
         linkedin: 'https://www.linkedin.com/in/victor-reyes-sec/',
         github: 'https://github.com/robb-gg',
       },

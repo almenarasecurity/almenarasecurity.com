@@ -536,10 +536,8 @@ const en = {
       victor: {
         name: 'Víctor Reyes',
         role: 'Co-founder & Security Researcher',
-        bio: 'Security researcher with 7+ years of web application auditing experience. He has worked as a Security Auditor at Hispasec Sistemas and currently at Freepik Company, where he has spent over 5 years assessing the security of digital products at scale. His background as a web developer gives him the ability to read code the way its authors think.',
-        bio_2: 'His specialty is source code analysis — a discipline where hands-on experience outperforms any automated tool. An active participant in the security community, he regularly attends national and international conferences. He firmly believes that understanding how software is built is the key to finding how it breaks.',
-        skills: ['Source Code Analysis', 'Web Pentesting', 'Security Auditing', 'PHP/MySQL', 'OWASP'],
-        speaking: ['Navaja Negra', 'RootedCON'],
+        bio: 'Security researcher with 7+ years of experience in web application security auditing. His background as a web developer gives him a unique perspective: he understands code the way the people who write it do.',
+        bio_2: 'His specialty is source code analysis — a discipline where hands-on experience outperforms any automated tool. He firmly believes that understanding how software is built is the key to finding how it breaks.',
         linkedin: 'https://www.linkedin.com/in/victor-reyes-sec/',
         github: 'https://github.com/robb-gg',
       },
