@@ -540,7 +540,7 @@ const es = {
         bio_2: 'Su especialidad es el análisis de código fuente — una disciplina donde la experiencia práctica supera a cualquier herramienta automatizada. Seguidor activo de la escena de seguridad, asiste regularmente a conferencias nacionales e internacionales. Cree firmemente que entender cómo se construye el software es la clave para encontrar cómo se rompe.',
         skills: ['Análisis de Código Fuente', 'Pentesting Web', 'Auditoría de Seguridad', 'PHP/MySQL', 'OWASP'],
         speaking: ['Navaja Negra', 'RootedCON'],
-        linkedin: 'https://linkedin.com/in/victor-reyes',
+        linkedin: 'https://www.linkedin.com/in/victor-reyes-sec/',
         github: 'https://github.com/robb-gg',
       },
     },

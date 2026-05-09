@@ -540,7 +540,7 @@ const en = {
         bio_2: 'His specialty is source code analysis — a discipline where hands-on experience outperforms any automated tool. An active participant in the security community, he regularly attends national and international conferences. He firmly believes that understanding how software is built is the key to finding how it breaks.',
         skills: ['Source Code Analysis', 'Web Pentesting', 'Security Auditing', 'PHP/MySQL', 'OWASP'],
         speaking: ['Navaja Negra', 'RootedCON'],
-        linkedin: 'https://linkedin.com/in/victor-reyes',
+        linkedin: 'https://www.linkedin.com/in/victor-reyes-sec/',
         github: 'https://github.com/robb-gg',
       },
     },
