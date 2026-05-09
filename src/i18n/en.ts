@@ -138,7 +138,7 @@ const en = {
       },
       {
         q: 'Do you work with companies outside Spain?',
-        a: 'Yes. We work with clients across Europe. Our reports and communication are available in both English and Spanish, and we\'re experienced in remote engagements.',
+        a: 'Yes. We work with clients worldwide. Our reports and communication are available in both English and Spanish, and we\'re experienced in remote engagements.',
       },
       {
         q: 'What\'s the difference between an automated scan and a manual pentest?',
@@ -498,7 +498,7 @@ const en = {
       p1: 'For centuries, the coast of Malaga lived under threat. Pirates, raids, attacks from the sea. The response wasn\'t to build higher walls — it was to build a network. Dozens of almenaras, watchtowers that could see each other, ready to light a fire at the first sign of danger. One tower detected. The next alerted. In minutes, the entire coast knew something was coming.',
       p2: 'Today the threats come through different channels, but the principle is the same: detect early, alert clearly, respond as a network.',
       p3: 'At Almenara Security we help SMBs and mid-sized companies protect themselves against digital threats with two things: technical pentesting that finds vulnerabilities before attackers do, and practical training that turns every employee into one more almenara in your organization. And we do it leveraging AI, because threats evolve fast and we need to move faster.',
-      p4: 'We were born in Malaga, facing the same Mediterranean the original almenaras watched over. We work with local clients and teams across Europe. And we do it with one clear idea: serious cybersecurity shouldn\'t be a luxury reserved for large corporations.',
+      p4: 'We were born in Malaga, facing the same Mediterranean the original almenaras watched over. We work with clients and teams around the world. And we do it with one clear idea: serious cybersecurity shouldn\'t be a luxury reserved for large corporations.',
     },
     values: {
       title: 'Our values',
@@ -536,7 +536,7 @@ const en = {
     },
     malaga: {
       title: 'Why Malaga',
-      description: 'Born on the Mediterranean coast, we combine the warmth and accessibility of our origins with international ambition. Malaga\'s growing tech ecosystem is our home base, but our work reaches clients across Spain and Europe.',
+      description: 'Born on the Mediterranean coast, we combine the warmth and accessibility of our origins with global ambition. Malaga\'s growing tech ecosystem is our home base, but our work reaches clients worldwide.',
     },
   },
   contact_page: {

@@ -138,7 +138,7 @@ const es = {
       },
       {
         q: '¿Trabajáis con empresas fuera de España?',
-        a: 'Sí. Trabajamos con clientes en toda Europa. Nuestros informes y comunicación están disponibles en inglés y español, y tenemos experiencia en proyectos remotos.',
+        a: 'Sí. Trabajamos con clientes en todo el mundo. Nuestros informes y comunicación están disponibles en inglés y español, y tenemos experiencia en proyectos remotos.',
       },
       {
         q: '¿Cuál es la diferencia entre un escáner automatizado y un pentest manual?',
@@ -498,7 +498,7 @@ const es = {
       p1: 'Durante siglos, la costa malagueña vivió bajo amenaza. Piratas, incursiones, ataques desde el mar. La respuesta no fue construir murallas más altas: fue construir una red. Decenas de almenaras, torres de vigilancia que se veían entre sí, listas para encender una hoguera al primer indicio de peligro. Una torre detectaba. La siguiente avisaba. En cuestión de minutos, toda la costa sabía que algo se acercaba.',
       p2: 'Hoy las amenazas vienen por otros canales, pero el principio es el mismo: detectar a tiempo, avisar con claridad, responder en red.',
       p3: 'En Almenara Security ayudamos a pymes y empresas medianas a protegerse de las amenazas digitales con dos cosas: pentesting técnico que encuentra las vulnerabilidades antes que los atacantes, y formación práctica que convierte a cada empleado en una almenara más en tu organización. Y lo hacemos apoyándonos en IA, porque las amenazas evolucionan rápido y nosotros tenemos que ir más rápido todavía.',
-      p4: 'Nacimos en Málaga, frente al mismo Mediterráneo que vieron las almenaras originales. Trabajamos con clientes locales y con equipos en toda Europa. Y lo hacemos con una idea clara: la ciberseguridad seria no debería ser un lujo de grandes corporaciones.',
+      p4: 'Nacimos en Málaga, frente al mismo Mediterráneo que vieron las almenaras originales. Trabajamos con clientes y equipos en todo el mundo. Y lo hacemos con una idea clara: la ciberseguridad seria no debería ser un lujo de grandes corporaciones.',
     },
     values: {
       title: 'Nuestros valores',
@@ -536,7 +536,7 @@ const es = {
     },
     malaga: {
       title: '¿Por qué Málaga?',
-      description: 'Nacidos en la costa mediterránea, combinamos la calidez y cercanía de nuestro origen con ambición internacional. El creciente ecosistema tecnológico de Málaga es nuestra base, pero nuestro trabajo llega a clientes en toda España y Europa.',
+      description: 'Nacidos en la costa mediterránea, combinamos la calidez y cercanía de nuestro origen con ambición global. El creciente ecosistema tecnológico de Málaga es nuestra base, pero nuestro trabajo llega a clientes en todo el mundo.',
     },
   },
   contact_page: {
